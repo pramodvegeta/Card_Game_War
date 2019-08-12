@@ -1,7 +1,5 @@
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Pramod Chandra
@@ -16,7 +14,6 @@ public class GameOfWar extends Game {
 
     PlayerOfWar p1;
     PlayerOfWar p2;
-//    PlayerOfWar tie;
 
     public GameOfWar(String gameName) {
         super(gameName);
@@ -28,9 +25,6 @@ public class GameOfWar extends Game {
         deck.shuffle();
         p1 = (PlayerOfWar) getPlayers().get(0);
         p2 = (PlayerOfWar) getPlayers().get(1);
-
-//        tie = (PlayerOfWar) getPlayers().get(2);
-//        GroupOfCards pile3 = new GroupOfCards(52);
 
         deck.deal(p1.getPile(), p2.getPile());
     }
@@ -71,7 +65,6 @@ public class GameOfWar extends Game {
 
                         System.out.println("-1 War if " + c);
                     }
-                    //p2.getPile().showCards().add(p2.removeACard(0));
                     System.out.println("-1 if c is: " + c);
                 } else {
                     p2.getPile().showCards().add(p1.removeACard(0));
@@ -85,11 +78,11 @@ public class GameOfWar extends Game {
                 roundWinner = "tie";
                 if (p2.getPile().showCards().size() < 3) {
                     System.out.println("0 if c is: " + c);
-                    isWinner(); //I added
+                    isWinner();
 
                 } else if (p1.getPile().showCards().size() < 3) {
                     System.out.println("0 else if c is: " + c);
-                    isWinner(); //I added
+                    isWinner();
 
                 } else {
                     System.out.println("0 else c is: " + c);
