@@ -18,7 +18,25 @@ public class PlayerOfWarTest {
     public PlayerOfWarTest() {
     }
     
-   
+    @BeforeClass
+    public static void setUpClass() {
+        System.out.println("Before Class");
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+        System.out.println("After Class");
+    }
+
+    @Before
+    public void setUp() {
+        System.out.println("Before Test");
+    }
+
+    @After
+    public void tearDown() {
+        System.out.println("After Class");
+    }
 
     /**
      * Test of setPlayerID method, of class PlayerOfWar.
@@ -46,7 +64,5 @@ public class PlayerOfWarTest {
         String result = instance.getPlayerID();
        assertEquals("", result);
     }
-
-    
     
 }
