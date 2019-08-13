@@ -30,7 +30,7 @@ public class GameOfWar extends Game {
     @Override
     public void declareWinner() {
         if (p1.getPile().showCards().isEmpty() || p1.getPile().showCards().size() < 3) {
-            System.out.println("You have lost the game");
+            System.out.println("\nYou have lost the game");
         } else {
             System.out.println("\nYou have won the game");
         }
