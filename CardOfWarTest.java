@@ -13,11 +13,31 @@ import static org.junit.Assert.*;
  * @author Kiran
  */
 public class CardOfWarTest {
-    
+
     public CardOfWarTest() {
     }
 
-    /**
+    @BeforeClass
+    public static void setUpClass() {
+        System.out.println("Before Class");
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+        System.out.println("After Class");
+    }
+
+    @Before
+    public void setUp() {
+        System.out.println("Before Test");
+    }
+
+    @After
+    public void tearDown() {
+        System.out.println("After Class");
+    }
+
+/**
      * Test of toString method, of class CardOfWar.
      */
      @Test
@@ -47,5 +67,4 @@ public class CardOfWarTest {
         int result = instance1.compareTo(instance2);
         assertEquals(expResult, result);
     }
-    
 }
