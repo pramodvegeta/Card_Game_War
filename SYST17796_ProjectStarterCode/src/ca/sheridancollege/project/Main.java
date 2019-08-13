@@ -37,14 +37,12 @@ public class Main {
 
                 if (roundResult.equalsIgnoreCase("tie")) {
                     System.out.println("Next card is hidden. And the subsequent card is " + p1.flipACard(gow.getWarNum()).toString());
-                    //System.out.println(gow.getWarNum());
                 } else {
                     System.out.println("Card on hand for Player 1: " + p1.flipACard(0).toString()); 
                     System.out.println("Card on hand for Player 2: " + p2.flipACard(0).toString()); 
                 }
                 System.out.println("You have " + roundResult + " this round.");
             }
-
         }
         else
         System.out.println("You have decided to exit. \nGood Bye.");
