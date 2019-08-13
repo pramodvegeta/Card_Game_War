@@ -32,13 +32,13 @@ public class GameOfWar extends Game {
         if (p1.getPile().showCards().isEmpty() || p1.getPile().showCards().size() < 3) {
             System.out.println("You have lost the game");
         } else {
-            System.out.println("You have won the game");
+            System.out.println("\nYou have won the game");
         }
 
     }
 
     public String oneRound() {
-       p1.play();
+        p1.play();
         p2.play();
         roundNum++;
         return declareResult(p1.flipACard(0), p2.flipACard(0), false);
@@ -96,10 +96,13 @@ public class GameOfWar extends Game {
     public void war() {
         declareResult(p1.flipACard(warNum), p2.flipACard(warNum), true);
     }
-    
-    
+
     public int getWarNum() {
         return warNum;
+    }
+
+    public int getRoundNum() {
+        return roundNum;
     }
 
     public boolean isWinner() {
