@@ -35,8 +35,6 @@ public class GameOfWarTest {
         System.out.println("declareResult");
         CardOfWar c1 = new CardOfWar("TWO","SPADE");
         CardOfWar c2 = new CardOfWar("ACE","HEART");
-       // boolean war = true;
-       // GameOfWar instance = new GameOfWar("");
         String expResult = "won";
         String result = gow.declareResult(c1, c2, true);
         assertEquals(expResult, result);
